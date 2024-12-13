@@ -1,0 +1,32 @@
+@media (max-width: 1008px) {
+    #img-santuli{
+        margin-left: 0px;
+    }
+    .logo-SEM{
+        height: 110px;
+    }
+    /* Cambiar la disposición de los elementos dentro de main para pantallas pequeñas */
+    main {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Aseguramos que los textos estén uno debajo del otro en pantallas pequeñas */
+    .mi-camino {
+        display: block;
+        width: 220px;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    /* Párrafos de los textos se ajustan en pantallas pequeñas */
+    .texto-info-personal,
+    .texto-info-experiencias,
+    .texto-info-profesional {
+        width: 95%;
+        padding: 5px;
+        margin: 10px;
+        height: auto;
+    }
+}
