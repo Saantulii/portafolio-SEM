@@ -1,31 +1,138 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color:antiquewhite
+body {
+    background: linear-gradient(to right, black, blue);
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-header{
-    background-color: wheat;
+header {
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-header h1{
-    color: black;
-    text-align: start;
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin-left: 50px;
+}
+h1 strong{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+#img-santuli {
+    width: 100px;
+    border-radius: 50px;
+    margin-left: 50px;
 }
 
-.redes-sociales{
+strong {
+    color: wheat;
+}
+
+#titulo-SEM {
+    color: wheat;
+    font-size: 55px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: whitesmoke;
+}
+
+.logo-SEM{
+    height: 130px;
+    border-radius: 50px;
+    justify-content: end;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/*ESTA CLASE ES GENERAL PARA TODOS LOS MAIN STRONG*/
+.mi-camino{ 
+    color: white;
+    font-size: 30px;
+    border: 1px solid gray;
+    height: 80px;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+strong p{
+    border: 2px solid red;
+}
+
+/*ESTA CLASE ES INDIVIDUAL PARA LOS LOS MAIN STRONG P - MI VIDA PERSONAL*/
+.texto-info-personal{
+    margin-top: 5px;
+    width: 400px;
+    height: 420px;
+    margin-left: 10px;
+    color: white;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/*ESTA CLASE ES INDIVIDUAL PARA LOS LOS MAIN STRONG P . MI EXPERIENCIAS*/
+.texto-info-experiencias{
+    margin-top: 10px;
+    width: 400px;
+    height: 100px;
+    margin-left: 50px;
+    color: white;
+    border: 1px solid grey;
+    padding: 5px;    
+}
+.texto-info-experiencias a{
+    color: red;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/*ESTA CLASE ES INDIVIDUAL PARA LOS LOS MAIN STRONG P - MI CAMINO PROFESIONAL*/
+.texto-info-profesional{
+    margin-top: 10px;
+    width: 400px;
+    height: 370px;
+    margin-left: 50px;
+    color: white;
+    border: 1px solid grey;
+    padding: 5px;
+
+}
+
+.redes-sociales {
     display: flex;
     justify-content: end;
     gap: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
-.redes-sociales img{
-    margin-top: 0px;
-    border-radius: 50px;
+.redes-sociales a {
+    display: inline-block;
+}
+
+.redes-sociales img {
+    border-radius: 50%;
     width: 60px;
     height: auto;
+    transition: transform 0.3s;
 }
+
+.redes-sociales img:hover {
+    transform: scale(1.1);
+}
+
