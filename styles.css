@@ -6,7 +6,7 @@
 
 body {
     background: linear-gradient(to right, black, blue);
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
 
@@ -63,7 +63,7 @@ main{
     color: white;
     font-size: 30px;
     border: 1px solid gray;
-    height: 80px;
+    height: 100px;
     padding: 5px;
     margin-left: 20px;
     margin-top: 10px;
@@ -73,11 +73,16 @@ strong p{
     border: 2px solid red;
 }
 
+p a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
 /*ESTA CLASE ES INDIVIDUAL PARA LOS LOS MAIN STRONG P - MI VIDA PERSONAL*/
 .texto-info-personal{
     margin-top: 5px;
     width: 400px;
-    height: 420px;
+    height: auto;
     margin-left: 10px;
     color: white;
     border: 1px solid grey;
@@ -88,8 +93,8 @@ strong p{
 /*ESTA CLASE ES INDIVIDUAL PARA LOS LOS MAIN STRONG P . MI EXPERIENCIAS*/
 .texto-info-experiencias{
     margin-top: 10px;
-    width: 400px;
-    height: 180px;
+    width: 410px;
+    height: 300px;
     margin-left: 50px;
     color: white;
     border: 1px solid grey;
@@ -100,12 +105,19 @@ strong p{
     margin-top: 5px;
     cursor: pointer;
 }
+.texto-info-experiencias a:hover{
+    color: black;
+    background-color: skyblue;
+    border-radius: 20px;
+    padding: 10px;
+}
+
 
 /*ESTA CLASE ES INDIVIDUAL PARA LOS LOS MAIN STRONG P - MI CAMINO PROFESIONAL*/
 .texto-info-profesional{
     margin-top: 10px;
     width: 400px;
-    height: 370px;
+    height: 400px;
     margin-left: 50px;
     color: white;
     border: 1px solid grey;
