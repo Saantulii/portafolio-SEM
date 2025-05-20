@@ -34,14 +34,12 @@
   </footer>
 
   <script>
-    const USUARIO  = 'miUsuario';
-    const PASSWORD = 'miContraseña123';
-
     document.getElementById('loginForm').addEventListener('submit', e => {
       e.preventDefault();
       const u = e.target.user.value;
       const p = e.target.pass.value;
-
+      const USUARIO  = '21092sdnsUHEWNJWEU';
+      const PASSWORD = 'NBU23098SHH31L8DS01##';
       if (u === USUARIO && p === PASSWORD) {
         sessionStorage.setItem('loggedIn', 'true');
         window.location.href = 'admin.html';
