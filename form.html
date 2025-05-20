@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <header>
+    <img id="img-santuli" src="ft santuli.jpg" alt="Tu foto">
+    <span id="titulo-SEM">Mi Portafolio</span>
+    <img class="logo-SEM" src="ft santuli.jpg" alt="Logo">
+  </header>
+
+  <main>
+    <h1>Deja tu mensaje</h1>
+    <form id="formularioContacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" placeholder="Tu apellido" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono"
+             pattern="[0-9+\-\s]{7,15}"
+             placeholder="+54 9 11 1234-5678"
+             required>
+
+      <label for="gmail">Gmail:</label>
+      <input type="email" id="gmail" placeholder="ejemplo@gmail.com" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Mi Portafolio. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('formularioContacto')
+      .addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nombre   = this.nombre.value.trim();
+        const apellido = this.apellido.value.trim();
+        const telefono = this.telefono.value.trim();
+        const gmail    = this.gmail.value.trim();
+        const mensaje  = this.mensaje.value.trim();
+
+        if (!nombre || !apellido || !telefono || !gmail || !mensaje) {
+          return alert('Completa todos los campos.');
+        }
+
+        const contactos = JSON.parse(localStorage.getItem('mensajes') || '[]');
+        contactos.push({ nombre, apellido, telefono, gmail, mensaje, fecha: new Date().toLocaleString('es-AR') });
+        localStorage.setItem('mensajes', JSON.stringify(contactos));
+
+        alert('¡Gracias! Tu mensaje fue enviado.');
+        this.reset();
+      });
+  </script>
+</body>
+</html>

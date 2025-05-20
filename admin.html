@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin — Mensajes</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <img id="img-santuli" src="ft santuli.jpg" alt="Tu foto">
+    <span id="titulo-SEM">Panel Admin</span>
+    <img class="logo-SEM" src="SEM.jpeg" alt="Logo">
+  </header>
+
+  <main>
+    <h1>Mensajes recibidos</h1>
+    <button id="logout">Cerrar Sesión</button>
+    <ul id="listaMensajes"></ul>
+  </main>
+
+  <footer>
+    &copy; 2025 Mi Portafolio.
+  </footer>
+
+  <script>
+    if (sessionStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+
+    const lista = document.getElementById('listaMensajes');
+    const envios = JSON.parse(localStorage.getItem('mensajes') || '[]');
+
+    if (envios.length === 0) {
+      lista.innerHTML = '<li>No hay mensajes aún.</li>';
+    } else {
+      envios.reverse().forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <em>[${item.fecha}]</em><br>
+          <strong>Nombre:</strong> ${item.nombre} ${item.apellido}<br>
+          <strong>Teléfono:</strong> ${item.telefono}<br>
+          <strong>Gmail:</strong> ${item.gmail}<br>
+          <strong>Mensaje:</strong> ${item.mensaje}
+        `;
+        lista.appendChild(li);
+      });
+    }
+
+    document.getElementById('logout').addEventListener('click', () => {
+      sessionStorage.removeItem('loggedIn');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
