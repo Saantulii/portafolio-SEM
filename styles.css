@@ -90,21 +90,6 @@ footer {
     border-radius: 10px;
 }
 
-.redes-sociales a {
-    margin: 0 10px;
-}
-
-.redes-sociales img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
-
-.redes-sociales img:hover {
-    transform: scale(1.2);
-}
-
 /* Responsividad */
 @media (max-width: 768px) {
     #titulo-SEM {
@@ -118,4 +103,24 @@ footer {
     h1 {
         font-size: 2rem;
     }
+}
+
+
+
+/* Estilo del botón “Volver” */
+.btn-form {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ff9f1c;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #ff9f1c;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.btn-form:hover {
+  color: #1e1e2f;
+  transform: translateY(-2px);
 }
